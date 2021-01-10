@@ -4,8 +4,8 @@ services:
   dj:
     container_name: dj
     build: django
-    #command: python manage.py runserver 0.0.0.0:81
-    command: bash -c "sleep infinity"
+    command: python bashpromptmaker/manage.py runserver 0.0.0.0:81
+    #command: bash -c "sleep infinity"
     volumes:
       - ./django:/code/
     ports:
