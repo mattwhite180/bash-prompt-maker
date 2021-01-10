@@ -1,1 +1,8 @@
-<p>elements works!</p>
+<h2>{{element.name | uppercase}} Details</h2>
+<div><span>id: </span>{{element.id}}</div>
+<div><span>color:</span>{{element.color}}</div>
+<div>
+  <label>name:
+    <input [(ngModel)]="element.name" placeholder="name"/>
+  </label>
+</div>

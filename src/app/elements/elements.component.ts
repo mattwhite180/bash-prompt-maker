@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Element } from '../element';
 
 @Component({
   selector: 'app-elements',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElementsComponent implements OnInit {
 
+  element: Element = {
+    id: 1,
+    name: 'date',
+    value: '#date',
+    color: 'white'
+  }
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
