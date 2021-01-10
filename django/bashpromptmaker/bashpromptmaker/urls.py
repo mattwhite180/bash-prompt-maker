@@ -21,4 +21,5 @@ from bpm import views as bashprompt_api_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/bash-prompt/', bashprompt_api_views.BashPromptList.as_view(), name='bashPrompt-list'),
+    path('api/task/<int:bp_id>/', bashprompt_api_views.BashPromptDetails.as_view(), name='bashPrompt-detail'),
 ]

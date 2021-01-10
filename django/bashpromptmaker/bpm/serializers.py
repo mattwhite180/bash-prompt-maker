@@ -4,4 +4,4 @@ from .models import BashPrompt
 class BashPromptSerializer(serializers.ModelSerializer):
     class Meta:
         model = BashPrompt
-        fields = ('name', 'value', 'created_on')
+        fields = ('id', 'name', 'value', 'created_on')
