@@ -10,7 +10,7 @@ RUN pip install -r /requirements.txt
 
 # Set work directory.
 RUN mkdir /code
-WORKDIR /code
+WORKDIR /code/bashpromptmaker
 
 # Copy project code.
 COPY . /code/
