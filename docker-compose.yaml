@@ -1,6 +1,10 @@
 version: "3"
 
 services:     
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=somepassword
   dj:
     container_name: dj
     build: django
@@ -10,3 +14,7 @@ services:
       - ./django:/code/
     ports:
       - "81:81"
+    depends_on:
+      - db
+    environment:
+      - POSTGRES_PASSWORD=somepassword
