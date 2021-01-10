@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from bpm import views as bashprompt_api_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/bash-prompt/', bashprompt_api_views.BashPromptList.as_view(), name='bashPrompt-list'),
 ]
