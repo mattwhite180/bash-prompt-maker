@@ -1,8 +1,20 @@
-<h2>{{element.name | uppercase}} Details</h2>
-<div><span>id: </span>{{element.id}}</div>
-<div><span>color:</span>{{element.color}}</div>
-<div>
-  <label>name:
-    <input [(ngModel)]="element.name" placeholder="name"/>
-  </label>
+<h2>My Elements</h2>
+<ul class="elements">
+  <li *ngFor="let element of elements"
+    [class.selected]="element === selectedElement"
+    (click)="onSelect(element)">
+    <span class="badge">{{element.id}}</span> {{element.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedElement">
+
+  <h2>{{selectedElement.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedElement.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedElement.name" placeholder="name"/>
+    </label>
+  </div>
+
 </div>

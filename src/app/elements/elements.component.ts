@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Element } from '../element';
+import { ELEMENTS } from '../mock-elements';
 
 @Component({
   selector: 'app-elements',
@@ -8,16 +9,15 @@ import { Element } from '../element';
 })
 export class ElementsComponent implements OnInit {
 
-  element: Element = {
-    id: 1,
-    name: 'date',
-    value: '#date',
-    color: 'white'
-  }
+  elements = ELEMENTS;
+  selectedElement: Element;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSelect(element: Element): void {
+    this.selectedElement = element;
+  }
 }
