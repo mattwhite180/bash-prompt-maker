@@ -6,6 +6,9 @@
     (click)="onSelect(element)">
     <span class="badge">{{element.id}}</span> {{element.name}}
   </li>
+  <span *ngFor="let element of elements">{{element.value}}</span>
 </ul>
+
+
 
 <app-element-detail [element]="selectedElement"></app-element-detail>
