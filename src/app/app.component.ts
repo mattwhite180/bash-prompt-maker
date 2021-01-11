@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bash prompt maker';
+  title = 'bash prompt maker (matthew white)';
 }
