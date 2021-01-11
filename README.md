@@ -1,4 +1,4 @@
-[aws](https://main.dh1o1njdm7xbu.amplifyapp.com/)
+[aws](https://www.bashpromptmaker.com/)
 
 
 
