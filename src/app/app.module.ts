@@ -5,17 +5,21 @@ import { AppComponent } from './app.component';
 import { ElementsComponent } from './elements/elements.component';
 import { ElementDetailComponent } from './element-detail/element-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ElementsComponent,
     ElementDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     // no need to place any providers due to the `providedIn` flag...
