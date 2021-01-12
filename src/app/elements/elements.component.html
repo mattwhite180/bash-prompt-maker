@@ -1,8 +1,8 @@
 <h2>My Elements</h2>
 <ul class="elements">
   <li *ngFor="let element of elements">
-    <a routerLink="/detail/{{element.id}}">
+    <div routerLink="/detail/{{element.id}}">
       <span class="badge">{{element.id}}</span> {{element.name}}
-    </a>
+    </div>
   </li>
 </ul>
