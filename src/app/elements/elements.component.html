@@ -1,11 +1,8 @@
 <h2>My Elements</h2>
-
 <ul class="elements">
-  <li *ngFor="let element of elements"
-    [class.selected]="element === selectedElement"
-    (click)="onSelect(element)">
-    <span class="badge">{{element.id}}</span> {{element.name}}
+  <li *ngFor="let element of elements">
+    <div routerLink="/detail/{{element.id}}">
+      <span class="badge">{{element.id}}</span> {{element.name}}
+    </div>
   </li>
 </ul>
-
-<app-element-detail [element]="selectedElement"></app-element-detail>
