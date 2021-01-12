@@ -1,10 +1,8 @@
 <h2>My Elements</h2>
-
 <ul class="elements">
-  <li *ngFor="let element of elements"
-    [class.selected]="element === selectedElement"
-    (click)="onSelect(element)">
-    <span class="badge">{{element.id}}</span> {{element.name}}
+  <li *ngFor="let element of elements">
+    <a routerLink="/detail/{{element.id}}">
+      <span class="badge">{{element.id}}</span> {{element.name}}
+    </a>
   </li>
-  <span *ngFor="let element of elements">{{element.value}}</span>
 </ul>
