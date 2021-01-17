@@ -26,7 +26,7 @@ export class ElementSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.element$ = this.searchTerms.pipe(
+    this.elements$ = this.searchTerms.pipe(
       // wait 300ms after each keystroke before considering the term
       debounceTime(300),
 

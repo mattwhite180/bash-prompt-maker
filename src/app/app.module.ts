@@ -25,7 +25,10 @@ import { ElementSearchComponent } from './element-search/element-search.componen
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [
     // no need to place any providers due to the `providedIn` flag...
