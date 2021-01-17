@@ -32,4 +32,8 @@ export class ElementDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+  save(): void {
+  this.elementService.updateElement(this.element)
+    .subscribe(() => this.goBack());
+}
 }

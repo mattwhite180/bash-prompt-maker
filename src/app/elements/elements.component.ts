@@ -21,4 +21,12 @@ export class ElementsComponent implements OnInit {
     this.elementService.getElements()
     .subscribe(elements => this.elements = elements);
   }
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.elementService.addElement({ element } as Element)
+      .subscribe(element => {
+        this.elements.push(element);
+      });
+  }
 }

@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "bash-prompt-maker"
+  "defaultProject": "bash-prompt-maker",
+  "cli": {
+    "analytics": false
+  }
 }

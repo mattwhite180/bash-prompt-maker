@@ -1,8 +1,16 @@
 <h2>My Elements</h2>
 <ul class="elements">
   <li *ngFor="let element of elements">
-    <div routerLink="/detail/{{element.id}}">
-      <span class="badge">{{element.id}}</span> {{element.name}}
+    <div>
+      <label>Element name:
+        <input #elementName />
+      </label>
+      <!-- (click) passes input value to add() and then clears the input -->
+      <button (click)="add(elementName.value); elementName.value=''">
+        add
+      </button>
+      <button class="delete" title="delete element"
+  (click)="delete(element)">x</button>
     </div>
   </li>
 </ul>
