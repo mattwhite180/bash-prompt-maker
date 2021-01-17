@@ -72,4 +72,13 @@ export class ElementService {
       catchError(this.handleError<Element>('addElement'))
     );
   }
+  deleteElement(element: Element | number): Observable<Element> {
+    const id = typeof element === 'number' ? element : element.id;
+    const url = `${this.elementsUrl}/${id}`;
+  
+    return this.http.delete<Element>(url, this.httpOptions).pipe(
+      tap(_ => this.log(`deleted element id=${id}`)),
+      catchError(this.handleError<Element>('deleteElement'))
+    );
+  }
 }
